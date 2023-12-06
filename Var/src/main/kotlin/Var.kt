@@ -22,6 +22,7 @@ fun main () {
     //or
     var c: String = "$a and this is a char $b"
     println(c)
+    println("Reversing a string \"this\" using reversed() method: ${"this".reversed()}")
 
     //Float and double variables
     var f = 5.51
