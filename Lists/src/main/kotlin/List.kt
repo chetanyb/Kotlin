@@ -32,4 +32,14 @@ fun main () {
         fibonnaciList.add((fibonnaciList[i-1] + fibonnaciList[i-2]))
     }
     println(fibonnaciList)
+    //Trying out when: when is used when dependency is only on a single variable
+    print("Enter your age: ")
+    val age = readlnOrNull()?.toInt() ?: 0
+    when (age) {
+        in 0..5 -> println("iPAD")
+        in 0..17 -> println ("Don't be KOD")
+        18 -> println("You're just as cool as this code")
+        20,21 -> println("ADULTING TIME")
+        else -> println("Boomer")
+    }
 }
