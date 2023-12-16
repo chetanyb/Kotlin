@@ -13,7 +13,11 @@ fun main () {
     val list = listOf(1, 2, 3, 4)
     val index = 2
     println("Value at index $index in list $list is ${valueAt(list, index)}")
-
+    val newArray = intArrayOf(1, 2, 3, 4, 5, 300)
+    println("The maximum value in 1, 11, 55, 165, 7, 158, 164, ${newArray.joinToString()} is ${getMax(1, 11, 55, 165, 7, 158, 164, *newArray)}")
+    teamMaker("Rohit Sharma")
+    teamMaker("Hardik Pandya", "Gujrat Titans")
+    teamMaker(team = "India")
 }
 fun doSomething(doingThis: String) {
     println("Yo! I just did $doingThis")
@@ -25,6 +29,22 @@ fun printPower(base: Int, exponent: Int): Int {
         result *= base
     }
     return result
+}
+
+//default parameter
+fun teamMaker(captain: String = "Mahendra Singh Dhoni", team: String = "Mumbai Indians") {
+    println("The captain of $team is $captain")
+}
+
+//vararg
+fun getMax(vararg numbers: Int): Int {
+    var max = numbers[0]
+    for(number in numbers) {
+        if (number > max) {
+            max = number
+        }
+    }
+    return max
 }
 
 //Single line function
