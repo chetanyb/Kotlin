@@ -18,6 +18,9 @@ fun main () {
     teamMaker("Rohit Sharma")
     teamMaker("Hardik Pandya", "Gujrat Titans")
     teamMaker(team = "India")
+    print("Enter a number to check if it is even: ")
+    val checkEven = readlnOrNull()?.toInt() ?: 0
+    println("The input $checkEven is ${if(checkEven.isEven()) "even" else "odd"}")
 }
 fun doSomething(doingThis: String) {
     println("Yo! I just did $doingThis")
@@ -52,3 +55,8 @@ fun multiply(a: Int, b: Int) = a * b
 
 //function that takes in list input
 fun valueAt(list: List<Int>, index: Int) = list[index]
+
+//Extension function
+fun Int.isEven(): Boolean {
+    return this%2 == 0
+}
