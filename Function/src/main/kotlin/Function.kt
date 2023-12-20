@@ -22,10 +22,13 @@ fun main () {
     val checkEven = readlnOrNull()?.toInt() ?: 0
     println("The input $checkEven is ${if(checkEven.isEven()) "even" else "odd"}")
 }
+
+//function without return
 fun doSomething(doingThis: String) {
     println("Yo! I just did $doingThis")
 }
 
+//function with return
 fun printPower(base: Int, exponent: Int): Int {
     var result = 1
     for(i in 1..exponent) {
