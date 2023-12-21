@@ -32,7 +32,7 @@ fun main () {
         fibonnaciList.add((fibonnaciList[i-1] + fibonnaciList[i-2]))
     }
     println(fibonnaciList)
-    //Trying out when: when is used when dependency is only on a single variable
+    //Trying out when: when is used when dependency is only on a single variable and not on multiple variables
     print("Enter your age: ")
     val age = readlnOrNull()?.toInt() ?: 0
     when (age) {
