@@ -4,9 +4,9 @@ class Triangle (
     val a: Double,
     val b: Double,
     val c: Double
-) {
+) : Shape(name = "Triangle") {
     init {
-        println("Triangle created with sides $a, $b and $c")
+        println("$name created with sides $a, $b and $c")
         println()
     }
 

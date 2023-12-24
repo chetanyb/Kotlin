@@ -3,13 +3,17 @@ class Rectangle(
     //this is inside the constructor
     val length: Double,
     val breadth: Double
-) {
+) : Shape(name = "Rectangle") {
     //The init block is always called after the primary constructor
     init {
-    println("Rectangle created with length $length and breadth $breadth")
+        println("$name created with length $length and breadth $breadth")
+        println("$name area is ${area()}")
+        println("$name perimeter is ${perimeter()}")
+        println("Is $name a square: ${isSquare()}")
+
     }
     //functions for the class rectangle
     fun area() = length * breadth
     fun perimeter() = 2 * length + 2 * breadth
-    fun isSsquare() = length == breadth
+    fun isSquare() = length == breadth
 }
