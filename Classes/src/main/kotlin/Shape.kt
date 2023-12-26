@@ -7,13 +7,15 @@
 // For top-level (non-class) declarations, such as functions and properties, the available visibility modifiers are 'public' (default), 'internal', and 'private'.
 // Kotlin does not have a package-private visibility like Java. The closest equivalent is 'internal', which is restricted to the same module.
 
-open class Shape(
+abstract class Shape(
     var name: String
 ) {
     init {
         println("I am the superclass")
     }
 
+    abstract fun area(): Double
+    abstract fun perimeter(): Double
     fun changeName(newName: String) {
         name = newName
     }

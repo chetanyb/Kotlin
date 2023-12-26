@@ -13,7 +13,7 @@ class Rectangle(
 
     }
     //functions for the class rectangle
-    fun area() = length * breadth
-    fun perimeter() = 2 * length + 2 * breadth
+    override fun area() = length * breadth
+    override fun perimeter() = 2 * length + 2 * breadth
     fun isSquare() = length == breadth
 }

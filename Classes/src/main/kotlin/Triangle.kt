@@ -10,8 +10,8 @@ class Triangle (
         println()
     }
 
-    fun perimeter() = a + b + c
-    fun area(): Double {
+    override fun perimeter() = a + b + c
+    override fun area(): Double {
         val p = perimeter()
         return sqrt((p/2) * ((p/2) - a) * ((p/2) -b) * ((p/2) -c))
     }

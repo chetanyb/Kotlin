@@ -8,6 +8,6 @@ class Circle(
         println("$name's circumference is ${perimeter()}")
     }
     //functions for class circle
-    fun area() = radius * radius * pi
-    fun perimeter() = 2 * pi * radius
+    override fun area() = radius * radius * pi
+    override fun perimeter() = 2 * pi * radius
 }
