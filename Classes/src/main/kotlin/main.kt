@@ -23,6 +23,9 @@ fun main() {
     println("alternatePrinter with Array")
     alternatePrinter(myArray)
 
+    //creating a random circle
+    val newCircle = Circle.randomCircle()
+
 }
 
 fun maxArea(shape1: Shape, shape2: Shape): Double {

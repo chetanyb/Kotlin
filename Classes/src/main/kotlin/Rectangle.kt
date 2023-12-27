@@ -1,3 +1,5 @@
+import kotlin.random.Random
+
 //The constructor is defined in the class header and is called the primary constructor
 class Rectangle(
     //this is inside the constructor
@@ -9,6 +11,16 @@ class Rectangle(
     constructor(a: Double) : this(a, a)
 
     constructor(a: Int, b: Int) : this(a.toDouble(), b.toDouble())
+
+    companion object {
+        fun randomRectangle(): Rectangle {
+            val side1 = Random.nextDouble(1.0, 10.0)
+            val side2 = Random.nextDouble(1.0, 10.0)
+            return Rectangle(side1, side2)
+        }
+
+    }
+
     //The init block is always called after the primary constructor
     init {
         println("$name created with length $length and breadth $breadth")
