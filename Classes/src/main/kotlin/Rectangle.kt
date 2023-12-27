@@ -4,6 +4,11 @@ class Rectangle(
     val length: Double,
     val breadth: Double
 ) : Shape(name = "Rectangle") {
+    //the below constructors are called secondary constructors
+    //The secondary constructor must call the primary constructor
+    constructor(a: Double) : this(a, a)
+
+    constructor(a: Int, b: Int) : this(a.toDouble(), b.toDouble())
     //The init block is always called after the primary constructor
     init {
         println("$name created with length $length and breadth $breadth")
