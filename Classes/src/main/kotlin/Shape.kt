@@ -1,3 +1,5 @@
+import java.awt.Dimension
+
 // In Kotlin, classes are 'public' by default, meaning they are accessible from anywhere in the project.
 // The 'internal' keyword makes the class visible within the same module. A module is a set of Kotlin files compiled together.
 // The 'protected' keyword is not applicable to classes but to class members. It makes a member visible to its class and subclasses only.
@@ -10,6 +12,7 @@
 abstract class Shape(
     var name: String
 ) {
+    constructor(name: String, vararg dimension: Double): this(name)
     init {
         println("I am the superclass")
     }

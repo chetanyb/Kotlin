@@ -26,7 +26,59 @@ fun main() {
     //creating a random circle
     val newCircle = Circle.randomCircle()
 
+    //creating a custom shape
+    //this is an anonymous class
+    val a = 3.0
+    val b = 4.0
+    val height = 2.5
+    val myParallelogram = object : Shape("Parallelogram", a, b, height){
+        init {
+            println("Parallelogram created with a= $a, b = $b and height = $height")
+            println("The area is ${area()}")
+            println("The perimeter is ${perimeter()}")
+            println("Is the parallelogram a rectangle: ${isRectangle()}")
+
+        }
+        override fun area(): Double {
+            return a * height
+        }
+
+        override fun perimeter(): Double {
+            return 2 * a + 2 * b
+        }
+
+
+        fun isRectangle(): Boolean = height == b
+
+    }
+
+
+    val c = 3.5
+    val d = 4.0
+
+    val myTrapezium = object: Shape("Trapezium", a, b, c, d, height) {
+
+        init {
+            println("Trapezium created with a: $a, b: $b, c: $c, d: $d and height: $height")
+            println("Area of trapezium: ${area()}")
+            println("Perimeter of trapezium: ${perimeter()}")
+            println("Is the parallelogram a rectangle: ${isRectangle()}")
+
+        }
+
+        override fun area(): Double {
+            return ((a+b)/2) * height
+        }
+
+        override fun perimeter(): Double {
+            return a + b + c + d
+        }
+
+        fun isRectangle(): Boolean = a == b && c == d
+    }
+    
 }
+
 
 fun maxArea(shape1: Shape, shape2: Shape): Double {
     val areaShape1 = shape1.area()
