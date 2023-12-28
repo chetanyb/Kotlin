@@ -85,6 +85,12 @@ fun main() {
 
         fun isRectangle(): Boolean = a == b && c == d
     }
+
+    var shapes = listOf(myRect, myCircle, newCircle, myParallelogram, myTriangle)
+    shapes = shapes.customFilter {it.area() > 20.0}
+    var integers = (1..10).toList().customFilter { it % 2 == 0 }
+    var customTriple = CustomTriple<Int, String, Boolean>(3, "kotlin", true)
+    customTriple.printTypes()
 }
 
 fun maxArea(shape1: Shape, shape2: Shape): Double {
@@ -121,3 +127,25 @@ fun alternatePrinter(a: Array<Int>) {
 //lambda functions are defined with curly braces
 //lambda functions can be passed as arguments to other functions
 val customSum = { numbers: List<Int>, condition: (Int) -> Boolean -> numbers.filter(condition).sum()}
+/* or this
+fun List<Int>.customSum(sumFunction: (Int) -> (Boolean)): Int {
+    var sum = 0
+    for (item in this) {
+        if (sumFunction(item)) {
+            sum += item
+        }
+    }
+    return sum
+}
+ */
+
+//We can limit the generic through this syntax: "<T :Number>" or "<T: Shape>"
+fun <T> List<T>.customFilter(filerFunction: (T) -> (Boolean)): List<T> {
+    val resultList = mutableListOf<T>()
+    for (item in this) {
+        if (filerFunction(item)) {
+            resultList.add(item)
+        }
+    }
+    return resultList
+}
