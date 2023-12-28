@@ -23,3 +23,5 @@ abstract class Shape(
         name = newName
     }
 }
+
+open class NegativeDimensionException(s: String): Exception("The shape cannot have negative dimension")

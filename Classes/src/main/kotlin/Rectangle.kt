@@ -18,7 +18,6 @@ class Rectangle(
             val side2 = Random.nextDouble(1.0, 10.0)
             return Rectangle(side1, side2)
         }
-
     }
 
     //The init block is always called after the primary constructor

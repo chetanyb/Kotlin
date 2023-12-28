@@ -1,5 +1,6 @@
 import kotlin.random.Random
 
+class NegativeRadiusException: NegativeDimensionException("The circle cannot have negative radius")
 class Circle(
     val radius: Double
 ) : Shape(name = "Circle") {
@@ -13,6 +14,9 @@ class Circle(
     }
 
     init {
+        if (radius < 0) {
+            throw NegativeRadiusException()
+        }
         println("$name created with radius: $radius")
         println("$name area is: ${area()}")
         println("$name's circumference is ${perimeter()}")

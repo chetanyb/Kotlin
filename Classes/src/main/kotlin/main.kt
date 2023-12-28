@@ -1,6 +1,16 @@
 fun main() {
     val myRect = Rectangle(99.99, 44.99)
-    val myCircle = Circle(5.51)
+    print("Enter the radius: ")
+    val radius = readln().toDouble()
+    val myCircle = try {
+        Circle(radius)
+    } catch(e: NegativeRadiusException) {
+        Circle(-radius)
+    } finally {
+        //myCircle not available here
+        println("Circle created")
+    }
+    println("Radius of circle: ${myCircle.radius}")
     val myTriangle = Triangle(2.51, 5.51, 4.51)
     val square = Rectangle(5.0)
     println("Changing name of Rectangle to Racoon")
