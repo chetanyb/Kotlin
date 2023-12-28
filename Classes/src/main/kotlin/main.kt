@@ -62,7 +62,6 @@ fun main() {
 
     }
 
-
     val c = 3.5
     val d = 4.0
 
@@ -86,9 +85,7 @@ fun main() {
 
         fun isRectangle(): Boolean = a == b && c == d
     }
-    
 }
-
 
 fun maxArea(shape1: Shape, shape2: Shape): Double {
     val areaShape1 = shape1.area()
@@ -119,3 +116,8 @@ fun alternatePrinter(a: Array<Int>) {
         println(a[i])
     }
 }
+//lambda function
+//lambda functions are anonymous functions that can be passed around as variables
+//lambda functions are defined with curly braces
+//lambda functions can be passed as arguments to other functions
+val customSum = { numbers: List<Int>, condition: (Int) -> Boolean -> numbers.filter(condition).sum()}
