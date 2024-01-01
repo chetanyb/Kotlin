@@ -20,3 +20,5 @@ Each project in this repository represents a different concept or aspect of Kotl
 ## Acknowledgments
 - A heartfelt thanks to Philipp Lackner for his comprehensive and engaging Kotlin tutorials.
 - Gratitude to the Kotlin community and the creators of the official documentation for their extensive resources.
+
+#### NOTE: Some topics are covered within single project with name of some other topic
